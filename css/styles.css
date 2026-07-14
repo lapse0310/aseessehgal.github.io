@@ -330,3 +330,35 @@ body {
 @media (max-width: 900px) {
   .project-row { flex-direction: column; }
 }
+
+.ride-grid {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+.ride-grid .polaroid { flex: 1; }
+.ride-text { flex: 1; }
+.speedo-icon { margin-bottom: 16px; }
+
+.life-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.index-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 2px 5px 14px rgba(0,0,0,.15);
+}
+.index-card:nth-child(odd) { transform: rotate(-1deg); }
+.index-card:nth-child(even) { transform: rotate(1.5deg); }
+.ticket-stub {
+  border: 2px dashed rgba(28,43,58,.3);
+  background: rgba(28,43,58,.03);
+  box-shadow: none;
+}
+
+@media (max-width: 900px) {
+  .ride-grid { flex-direction: column; }
+}
