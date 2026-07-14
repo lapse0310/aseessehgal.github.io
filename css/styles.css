@@ -354,9 +354,93 @@ body {
 .index-card:nth-child(odd) { transform: rotate(-1deg); }
 .index-card:nth-child(even) { transform: rotate(1.5deg); }
 .ticket-stub {
-  border: 2px dashed rgba(28,43,58,.3);
-  background: rgba(28,43,58,.03);
+  position: relative;
+  border: 2px dashed var(--mustard);
+  background: rgba(201,162,39,.07);
   box-shadow: none;
+  overflow: visible;
+}
+.ticket-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ticket-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--mustard);
+  font-weight: 600;
+}
+.ticket-plane {
+  transform: rotate(15deg);
+  display: inline-block;
+}
+.ticket-route {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+.ticket-code {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--ink-navy);
+  letter-spacing: .05em;
+}
+.ticket-dots {
+  flex: 1;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(28,43,58,.4) 40%, rgba(0,0,0,0) 0%);
+  background-position: bottom;
+  background-size: 6px 1px;
+  background-repeat: repeat-x;
+  position: relative;
+}
+.ticket-dots::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid rgba(28,43,58,.4);
+}
+.ticket-cities {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .05em;
+  color: rgba(28,43,58,.6);
+  margin-top: 4px;
+}
+.ticket-perf {
+  border-top: 1.5px dashed rgba(28,43,58,.25);
+  margin: 18px -20px 14px;
+  position: relative;
+}
+.ticket-perf::before,
+.ticket-perf::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 16px;
+  height: 16px;
+  background: var(--page-cream);
+  border-radius: 50%;
+}
+.ticket-perf::before { left: -8px; }
+.ticket-perf::after { right: -8px; }
+.ticket-row--meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .05em;
+  color: rgba(28,43,58,.5);
 }
 
 @media (max-width: 900px) {
