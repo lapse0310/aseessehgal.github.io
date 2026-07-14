@@ -213,3 +213,62 @@ body {
 @media (max-width: 900px) {
   .cover-grid { flex-direction: column; }
 }
+
+.timeline-entry {
+  display: flex;
+  gap: 20px;
+  padding-top: 28px;
+  margin-top: 28px;
+  border-top: 2px solid rgba(28,43,58,.15);
+}
+.timeline-entry:first-of-type { border-top: none; margin-top: 0; }
+
+.timeline-marker {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(28,43,58,.35);
+  margin-top: 6px;
+}
+.timeline-marker--current { background: var(--moss); }
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: rgba(28,43,58,.6);
+  margin-bottom: 4px;
+}
+.timeline-role {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.timeline-location {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: rgba(28,43,58,.6);
+  margin-bottom: 12px;
+}
+.timeline-body {
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.stack-chip {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  background: rgba(28,43,58,.08);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.margin-note {
+  font-family: var(--font-hand);
+  font-size: 24px;
+  color: var(--rust);
+  transform: rotate(-1deg);
+}
