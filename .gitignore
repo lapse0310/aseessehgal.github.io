@@ -1,0 +1,11 @@
+design_handoff_field_journal/Asees Sehgal - Field Journal.dc.html
+design_handoff_field_journal/Asees Sehgal Resume.dc.html
+design_handoff_field_journal/doc-page.js
+design_handoff_field_journal/image-slot.js
+design_handoff_field_journal/README.md
+
+# AI/dev tooling docs — not part of the shipped site
+docs/superpowers/
+CLAUDE.md
+AGENTS.md
+.claude/
